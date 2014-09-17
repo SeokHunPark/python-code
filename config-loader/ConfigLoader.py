@@ -41,7 +41,7 @@ class ConfigLoader:
 			elif type != '':
 				key, value = self.get_key_value(line)
 				self.config[type][key] = value
-		pprint(self.config)
+		#pprint(self.config)
 		f.close()
 		
 	def get_key_value(self, line):
