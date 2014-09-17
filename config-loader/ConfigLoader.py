@@ -1,6 +1,18 @@
 #!/usr/bin/evn python
 # -*- coding: utf-8 -*-
 
+# Example
+#
+# [CONFIG_TYPE1]
+# KEY1=VALUE
+# KEY2=VALUE
+# 
+# [CONFIG_TYPE1]
+# KEY1=VALUE
+# KEY2=VALUE
+# 
+#
+
 import sys
 from pprint import *
 
@@ -34,7 +46,7 @@ class ConfigLoader:
 		
 	def get_key_value(self, line):
 		arr = line.split('=')
-		return arr[0], arr[1]
+		return arr[0].strip(), arr[1].strip()
 		
 def main():
 	loader = ConfigLoader()
