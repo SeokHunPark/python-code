@@ -48,9 +48,13 @@ class ConfigLoader:
 		arr = line.split('=')
 		return arr[0].strip(), arr[1].strip()
 		
+	def print_config(self):
+		pprint(self.config)
+		
 def main():
 	loader = ConfigLoader()
 	loader.load_config()
+	loader.print_config()
 		
 if __name__ == "__main__" :
 	main()
